@@ -21,7 +21,9 @@ export function LivePricePage() {
   return (
     <div>
       <h1>Live bitcoin price</h1>
-      <Prices usd={usd} eur={eur} gbp={gbp} />
+      {
+        !gbp && !eur && !usd ? <p>please click button to refresh prices</p> : <Prices usd={usd} eur={eur} gbp={gbp} />
+      }
       <button onClick={refreshPrices}>Refresh prices</button>
       {lastUpdated && <p>Last update: {lastUpdated}</p>}
     </div>
