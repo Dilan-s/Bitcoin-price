@@ -12,7 +12,7 @@ export function LivePricePage() {
   return (
     <div>
       <h1>Live bitcoin price</h1>
-      <Prices usd={123} eur={1234} gbp={0} />
+      <Prices usd={123} eur={1234} gbp={gbp} />
       <button onClick={refreshPrices}>Refresh prices</button>
     </div>
   )
